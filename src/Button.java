@@ -25,7 +25,7 @@ public class Button extends JButton implements ActionListener {
 
             try {
                 User.loginToSite();
-                User.printHtml();
+                //User.printHtml();
                 //  User.getDataFromSite();
             } catch (IOException ex) {
                 ex.printStackTrace();

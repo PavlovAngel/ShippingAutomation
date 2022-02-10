@@ -3,7 +3,6 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 public class User {
     private static final String login = Account.getUserName() + ":" + Account.getPassword();
@@ -20,17 +19,9 @@ public class User {
                 .header("Authorization", "Basic " + base64login)
                 .execute();
         site.setDocument(response.parse());
-
     }
 
-    public static void printHtml() {
-        String[] words = site.getDocument().text().split(" ");
-        if (Arrays.stream(words).toList().contains("dictionary.")) {
-            System.out.println("kole poluchi li");
 
-
-        }
-    }
    /* public static String getOrderQuantity() throws IOException {
 
         int lines = impulse.getDocument()
