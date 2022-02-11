@@ -3,6 +3,7 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
+import java.lang.reflect.WildcardType;
 
 public class User {
     private static final String login = Account.getUserName() + ":" + Account.getPassword();
@@ -19,6 +20,7 @@ public class User {
                 .header("Authorization", "Basic " + base64login)
                 .execute();
         site.setDocument(response.parse());
+
     }
 
 
@@ -59,5 +61,8 @@ public class User {
 
         return null;
     }*/
+   static void printHtml(){
+        System.out.println(site.getDocument());
+    }
 }
 

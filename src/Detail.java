@@ -3,4 +3,5 @@ public class Detail {
     String description;
     int weight;
     int piecesInBox;
+
 }

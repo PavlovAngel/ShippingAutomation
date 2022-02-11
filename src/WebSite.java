@@ -5,16 +5,16 @@ public class WebSite {
 
     private static String htmlElementOrderQuantity;
     private final String deliveryNoteUrl;
-    private String detailInfoUr;
+    private String detailInfoUrl;
     public String htmlElementLine;
     private Document document;
 
 
     WebSite() {
         deliveryNoteUrl = "https://en.wikipedia.org/wiki/" + TextFieldPanel.getUrlFromTextField();
+         htmlElementLine = "toctext";
       /* htmlElementLine = "mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tab" +
                 "let mdc-layout-grid__cell--span-8-desktop";
-         htmlElementLine = "toctext";
          htmlElementOrderQuantity = "mdc-layout-grid__cell mdc-layout-grid__cell--span-1-tablet" +
                " mdc-layout-grid__cell--span-2-desktop mdc-layout-grid--align-right";
           */
@@ -39,6 +39,7 @@ public class WebSite {
     }
 
     public Document getDocument() {
+
         return document;
     }
 
