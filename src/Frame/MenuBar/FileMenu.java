@@ -1,11 +1,16 @@
 package Frame.MenuBar;
 
+import Frame.MenuBar.MenuItems.MenuItemNew;
+import Frame.MenuBar.MenuItems.MenuItemSave;
+
 import javax.swing.*;
 
 public class FileMenu extends JMenu {
-    NewFileMenuItem newFile = new NewFileMenuItem();
+    MenuItemNew newItem = new MenuItemNew();
+    MenuItemSave saveItem = new MenuItemSave();
 
     FileMenu() {
-        this.add(newFile);
+        this.add(newItem);
+        this.add(saveItem);
     }
 }

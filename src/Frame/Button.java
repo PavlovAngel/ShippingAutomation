@@ -1,6 +1,8 @@
 package Frame;
 
+import Main.Main;
 import Web.User;
+import Web.WebSite;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +17,8 @@ public class Button extends JButton implements ActionListener {
         this.setText("Click");
         this.setSize(110, 40);
         this.setLocation(178, 0);
-        this.setBackground(Color.WHITE);
+        this.setBorderPainted(true);
+        this.setForeground(new Color(0, 0, 0));
         this.setFocusable(false);
         this.addActionListener(this);
         this.setVisible(true);
@@ -26,13 +29,16 @@ public class Button extends JButton implements ActionListener {
         if (e.getSource() == this) {
 
             System.out.println(LocalDateTime.now());
-
             try {
                 User.loginToSite();
-                User.printHtml();
+                // User.printHtml();
                 //  Web.User.getDataFromSite();
+                TextFieldPanel.textField.setEditable(false);
+                TextFieldPanel.textField.setCaretColor(Color.white);
+
             } catch (IOException ex) {
                 ex.printStackTrace();
+
             }
             System.out.println(LocalDateTime.now());
 

@@ -7,15 +7,14 @@ import org.jsoup.nodes.Document;
 public class WebSite {
 
     private static String htmlElementOrderQuantity;
-    private final String deliveryNoteUrl;
+    public static String deliveryNoteUrl = "https://en.wikipedia.org/wiki/";
     private String detailInfoUrl;
     public String htmlElementLine;
     private Document document;
 
 
     WebSite() {
-        deliveryNoteUrl = "https://en.wikipedia.org/wiki/" + TextFieldPanel.getUrlFromTextField();
-        htmlElementLine = "toctext";
+
       /* htmlElementLine = "mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tab" +
                 "let mdc-layout-grid__cell--span-8-desktop";
          htmlElementOrderQuantity = "mdc-layout-grid__cell mdc-layout-grid__cell--span-1-tablet" +
@@ -28,9 +27,9 @@ public class WebSite {
         return htmlElementOrderQuantity;
     }
 
-    public String getUrl() {
+    public String getUrl(String url) {
 
-        return deliveryNoteUrl;
+        return deliveryNoteUrl + url;
     }
 
     public String getHtmlElementMaterialNumber() {

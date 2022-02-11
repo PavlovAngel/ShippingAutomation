@@ -1,9 +1,9 @@
 package Frame;
 
+import Frame.MenuBar.MenuBar;
+
 import javax.swing.*;
 import java.awt.*;
-
-import Frame.MenuBar.MenuBar;
 
 
 public class Frame extends JFrame {
@@ -17,7 +17,7 @@ public class Frame extends JFrame {
         this.setResizable(false);
         this.setTitle("");
         this.setSize(300, 130);
-        this.getContentPane().setBackground(new Color(212, 212, 212));
+        this.getContentPane().setBackground(new Color(13, 74, 86));
         this.setLocation(800, 100);
         this.add(textFieldPanel);
         this.add(button);

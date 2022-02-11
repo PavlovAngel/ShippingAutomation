@@ -1,10 +1,12 @@
 package Web;
 
+import Frame.TextFieldPanel;
 import Web.Account;
 import org.apache.commons.codec.binary.Base64;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
+import java.awt.*;
 import java.io.IOException;
 
 
@@ -13,17 +15,22 @@ public class User {
     private static final WebSite site = new WebSite();
 
     public static void loginToSite() throws IOException {
-        String base64login = new String(Base64.encodeBase64(login.getBytes()));
-        Connection.Response response = Jsoup
-                .connect(site.getUrl())
-                .timeout(30000)
-                .method(Connection.Method.GET)
-                .userAgent(
-                        "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0")
-                .header("Authorization", "Basic " + base64login)
-                .execute();
-        site.setDocument(response.parse());
+        try {
+            String base64login = new String(Base64.encodeBase64(login.getBytes()));
+            Connection.Response response = Jsoup
+                    .connect(site.getUrl(TextFieldPanel.getUrlFromTextField()))
+                    .timeout(30000)
+                    .method(Connection.Method.GET)
+                    .userAgent(
+                            "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:41.0) Gecko/20100101 Firefox/41.0")
+                    .header("Authorization", "Basic " + base64login)
+                    .execute();
+            site.setDocument(response.parse());
+        } catch (org.jsoup.HttpStatusException ex) {
+            ex.printStackTrace();
+            TextFieldPanel.textField.setForeground(Color.RED);
 
+        }
     }
 
 
@@ -67,5 +74,6 @@ public class User {
     public static void printHtml() {
         System.out.println(site.getDocument());
     }
+
 }
 

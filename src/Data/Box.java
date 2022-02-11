@@ -1,5 +1,7 @@
 package Data;
 
 public class Box {
-    int weight;
+    private int weight;
+    private int size;
+
 }
