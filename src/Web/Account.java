@@ -1,3 +1,5 @@
+package Web;
+
 public class Account {
     private static String userName;
     private static String password;
