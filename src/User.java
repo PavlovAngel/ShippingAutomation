@@ -3,7 +3,7 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
-import java.lang.reflect.WildcardType;
+
 
 public class User {
     private static final String login = Account.getUserName() + ":" + Account.getPassword();
