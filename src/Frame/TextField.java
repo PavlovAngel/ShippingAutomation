@@ -10,6 +10,7 @@ public class TextField extends JTextField {
         this.setPreferredSize(new Dimension(181, 50));
         this.setFont(new Font("Consolas", Font.BOLD, 18));
 
+
     }
 
 

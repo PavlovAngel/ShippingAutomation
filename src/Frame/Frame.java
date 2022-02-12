@@ -17,7 +17,7 @@ public class Frame extends JFrame {
         this.setResizable(false);
         this.setTitle("");
         this.setSize(300, 130);
-        this.getContentPane().setBackground(new Color(13, 74, 86));
+        this.getContentPane().setBackground(new Color(150, 148, 148));
         this.setLocation(800, 100);
         this.add(textFieldPanel);
         this.add(button);

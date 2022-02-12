@@ -15,9 +15,10 @@ public class Button extends JButton implements ActionListener {
 
     Button() {
         this.setText("Click");
-        this.setSize(110, 40);
-        this.setLocation(178, 0);
+        this.setSize(110, 42);
+        this.setLocation(178, -1);
         this.setBorderPainted(true);
+        this.setBackground(new Color(255,255 , 255));
         this.setForeground(new Color(0, 0, 0));
         this.setFocusable(false);
         this.addActionListener(this);

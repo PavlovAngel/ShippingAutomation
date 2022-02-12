@@ -1,11 +1,11 @@
-package Frame.MenuBar.MenuItems;
+package Frame.MenuBar.MenuFile;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MenuItemSave extends JMenuItem implements ActionListener {
-    public MenuItemSave() {
+public class FileMenuItemSave extends JMenuItem implements ActionListener {
+    public FileMenuItemSave() {
         this.setText("Save");
         this.addActionListener(this);
     }
