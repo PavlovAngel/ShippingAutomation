@@ -21,7 +21,7 @@ public class MenuBar extends JMenuBar {
         this.add(menuEdit);
         this.add(menuOptions);
         this.add(menuHelp);
-        this.setBackground(new Color(220, 217, 217));
+        this.setBackground(new Color(255, 255,255));
     }
 
 

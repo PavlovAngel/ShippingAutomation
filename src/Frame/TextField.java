@@ -1,6 +1,7 @@
 package Frame;
 
 import Web.User;
+import Web.WebSite;
 
 import javax.swing.*;
 import java.awt.*;
@@ -32,7 +33,10 @@ public class TextField extends JTextField implements KeyListener {
             // this.setEnabled(false);
             try {
                 User.loginToSite();
+                if (WebSite.getIsRealUrl()){
+
                 User.printHtml();
+                }
             } catch (IOException ex) {
                 this.setForeground(Color.RED);
                 ex.printStackTrace();
