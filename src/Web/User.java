@@ -5,6 +5,7 @@ import Web.Account;
 import org.apache.commons.codec.binary.Base64;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import java.awt.*;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.io.IOException;
 public class User {
     private static final String login = Account.getUserName() + ":" + Account.getPassword();
     private static final WebSite site = new WebSite();
+
 
     public static void loginToSite() throws IOException {
         try {
@@ -26,10 +28,12 @@ public class User {
                     .header("Authorization", "Basic " + base64login)
                     .execute();
             site.setDocument(response.parse());
+        site.setIsRealUrl(true);
+
         } catch (org.jsoup.HttpStatusException ex) {
+            site.setIsRealUrl(false);
             ex.printStackTrace();
             TextFieldPanel.textField.setForeground(Color.RED);
-
         }
     }
 

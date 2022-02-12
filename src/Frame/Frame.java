@@ -3,7 +3,10 @@ package Frame;
 import Frame.MenuBar.MenuBar;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
+import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.awt.*;
+import javax.swing.plaf.metal.DefaultMetalTheme;
 
 
 public class Frame extends JFrame {
@@ -18,13 +21,17 @@ public class Frame extends JFrame {
         this.setTitle("");
         this.setSize(300, 130);
         this.getContentPane().setBackground(new Color(150, 148, 148));
+        this.setTitle("Shipping");
         this.setLocation(800, 100);
         this.add(textFieldPanel);
         this.add(button);
         this.setJMenuBar(menuBar);
         this.setVisible(true);
         this.setAlwaysOnTop(true);
+
+    }
+
     }
 
 
-}
+

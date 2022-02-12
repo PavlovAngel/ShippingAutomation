@@ -1,11 +1,10 @@
 package Web;
 
-import Frame.TextFieldPanel;
 import org.jsoup.nodes.Document;
 
 
 public class WebSite {
-
+    private static boolean isRealUrl = true;
     private static String htmlElementOrderQuantity;
     public static String deliveryNoteUrl = "https://en.wikipedia.org/wiki/";
     private String detailInfoUrl;
@@ -48,6 +47,13 @@ public class WebSite {
     public void setDocument(Document document) {
         this.document = document;
     }
+    public static boolean getIsRealUrl(){
+        return isRealUrl;
+    }
+    public void setIsRealUrl(boolean isRealUrl){
+        this.isRealUrl=isRealUrl;
+    }
+
 
 }
 

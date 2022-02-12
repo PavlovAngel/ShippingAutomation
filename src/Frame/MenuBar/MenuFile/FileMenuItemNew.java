@@ -20,6 +20,7 @@ public class FileMenuItemNew extends JMenuItem implements ActionListener {
             TextFieldPanel.textField.setEditable(true);
             TextFieldPanel.setTextFieldCursorColour(Color.black);
             TextFieldPanel.textField.setForeground(Color.BLACK);
+            TextFieldPanel.textField.setEnabled(true);
 
 
         }

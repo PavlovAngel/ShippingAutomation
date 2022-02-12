@@ -32,10 +32,13 @@ public class Button extends JButton implements ActionListener {
             System.out.println(LocalDateTime.now());
             try {
                 User.loginToSite();
-                // User.printHtml();
-                //  Web.User.getDataFromSite();
+                if (WebSite.getIsRealUrl()){
+
+                 User.printHtml();
+                }
                 TextFieldPanel.textField.setEditable(false);
                 TextFieldPanel.textField.setCaretColor(Color.white);
+              //TextFieldPanel.textField.setEnabled(false);
 
             } catch (IOException ex) {
                 ex.printStackTrace();
