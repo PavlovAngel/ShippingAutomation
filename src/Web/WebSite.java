@@ -6,13 +6,14 @@ import org.jsoup.nodes.Document;
 public class WebSite {
     private static boolean isRealUrl = true;
     private static String htmlElementOrderQuantity;
-    public static String deliveryNoteUrl = "https://en.wikipedia.org/wiki/";
+    public static String deliveryNoteUrl = "https://www.abv.bg/";
     private String detailInfoUrl;
     public String htmlElementLine;
     private Document document;
 
 
     WebSite() {
+
 
       /* htmlElementLine = "mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tab" +
                 "let mdc-layout-grid__cell--span-8-desktop";

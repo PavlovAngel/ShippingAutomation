@@ -5,18 +5,18 @@ import Web.WebSite;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class TextField extends JTextField implements KeyListener {
-
+    public boolean isWrite = false;
 
     TextField() {
-        this.setPreferredSize(new Dimension(181, 50));
+        this.setPreferredSize(new Dimension(156, 50));
         this.setFont(new Font("Consolas", Font.BOLD, 18));
         this.addKeyListener(this);
+        this.setToolTipText("Enter Url!");
 
 
     }
@@ -29,13 +29,14 @@ public class TextField extends JTextField implements KeyListener {
     public void keyPressed(KeyEvent e) {
         if ((e.getKeyCode() == KeyEvent.VK_ENTER)) {
             System.out.println(LocalDateTime.now());
-            this.setEditable(false);
+            // this.setEditable(false);
+            isWrite = true;
             // this.setEnabled(false);
             try {
                 User.loginToSite();
-                if (WebSite.getIsRealUrl()){
+                if (WebSite.getIsRealUrl()) {
 
-                User.printHtml();
+                    User.printHtml();
                 }
             } catch (IOException ex) {
                 this.setForeground(Color.RED);

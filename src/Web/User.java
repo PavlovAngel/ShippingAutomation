@@ -1,14 +1,15 @@
 package Web;
 
 import Frame.TextFieldPanel;
-import Web.Account;
 import org.apache.commons.codec.binary.Base64;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
+import java.util.Objects;
 
 
 public class User {
@@ -28,15 +29,22 @@ public class User {
                     .header("Authorization", "Basic " + base64login)
                     .execute();
             site.setDocument(response.parse());
-        site.setIsRealUrl(true);
+            site.setIsRealUrl(true);
 
         } catch (org.jsoup.HttpStatusException ex) {
             site.setIsRealUrl(false);
             ex.printStackTrace();
+            TextFieldPanel.textField.setText("WRONG URL!");
             TextFieldPanel.textField.setForeground(Color.RED);
+
         }
     }
 
+    public static void write() {
+        StringSelection stringSelection = new StringSelection(TextFieldPanel.textField.getText());
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
+    }
 
     /* public static String getOrderQuantity() throws IOException {
 
