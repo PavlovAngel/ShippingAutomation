@@ -1,6 +1,6 @@
 package Frame;
 
-import Main.Main;
+
 import Web.User;
 import Web.WebSite;
 
@@ -23,6 +23,7 @@ public class Button extends JButton implements ActionListener {
         this.setFocusable(false);
         this.addActionListener(this);
         this.setVisible(true);
+        
     }
 
     @Override
@@ -35,7 +36,7 @@ public class Button extends JButton implements ActionListener {
                 if (WebSite.getIsRealUrl()) {
 
                     User.printHtml();
-                    User.write();
+                   User.write();
 
                 }
               TextFieldPanel.textField.setEditable(false);

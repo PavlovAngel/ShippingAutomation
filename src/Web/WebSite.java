@@ -1,6 +1,5 @@
 package Web;
 
-import Frame.TextField;
 import Frame.TextFieldPanel;
 import org.jsoup.nodes.Document;
 
@@ -9,7 +8,6 @@ public class WebSite {
     private static boolean isRealUrl = true;
     private static String htmlElementOrderQuantity;
     public static String deliveryNoteUrl = TextFieldPanel.getUrlFromTextField();
-    private String detailInfoUrl;
     public String htmlElementLine;
     private Document document;
 
@@ -38,10 +36,6 @@ public class WebSite {
         return htmlElementLine;
     }
 
-    private void setHtmlElementMaterialNumber(String htmlElementLine) {
-        this.htmlElementLine = htmlElementLine;
-    }
-
     public Document getDocument() {
 
         return document;
@@ -54,7 +48,7 @@ public class WebSite {
         return isRealUrl;
     }
     public void setIsRealUrl(boolean isRealUrl){
-        this.isRealUrl=isRealUrl;
+        WebSite.isRealUrl=isRealUrl;
     }
 
 

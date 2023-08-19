@@ -52,12 +52,12 @@ public class User {
         }
     }
 
-    // TODO: 19.8.2023 г. Copy the result
-   // public static void write() {
-       // StringSelection stringSelection = new StringSelection(TextFieldPanel.textField.getText());
-     //   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-      //  clipboard.setContents(stringSelection, null);
-   // }
+
+    public static void write() {
+       StringSelection stringSelection = new StringSelection(TextFieldPanel.textField.getText());
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+  clipboard.setContents(stringSelection, null);
+    }
 
     /* public static String getOrderQuantity() throws IOException {
 

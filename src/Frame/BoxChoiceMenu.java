@@ -1,7 +1,7 @@
 package Frame;
 
 import javax.swing.*;
-import java.awt.*;
+
 
 public class BoxChoiceMenu extends JPanel {
     BoxChoiceMenu() {

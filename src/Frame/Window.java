@@ -12,7 +12,6 @@ public class Window extends JFrame {
         TextFieldPanel textFieldPanel = new TextFieldPanel();
         Button button = new Button();
         MenuBar menuBar = new MenuBar();
-        StartWindow startWindow = new StartWindow();
         BoxChoiceMenu boxChoiceMenu = new BoxChoiceMenu();
         JLabel weight = new JLabel(0 + " kg");
         JLabel boxes = new JLabel("Boxes: " + 0);
