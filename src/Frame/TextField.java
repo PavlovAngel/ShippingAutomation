@@ -29,9 +29,9 @@ public class TextField extends JTextField implements KeyListener {
     public void keyPressed(KeyEvent e) {
         if ((e.getKeyCode() == KeyEvent.VK_ENTER)) {
             System.out.println(LocalDateTime.now());
-            // this.setEditable(false);
+             this.setEditable(false);
             isWrite = true;
-            // this.setEnabled(false);
+             this.setEnabled(false);
             try {
                 User.loginToSite();
                 if (WebSite.getIsRealUrl()) {

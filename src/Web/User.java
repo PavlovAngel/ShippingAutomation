@@ -29,6 +29,19 @@ public class User {
                     .execute();
             site.setDocument(response.parse());
             site.setIsRealUrl(true);
+        if (site.getDocument().getElementsByClass("mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet").text().length()< 20){
+            TextFieldPanel.textField.setText(site.getDocument().getElementsByClass
+                            ("mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet")
+                    .text().substring(15,19));
+        }
+        else    {
+            TextFieldPanel.textField.setText(site.getDocument().getElementsByClass
+                            ("mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet")
+                    .text().substring(24,28));
+
+        }
+
+
 
         } catch (org.jsoup.HttpStatusException ex) {
             site.setIsRealUrl(false);
@@ -39,11 +52,12 @@ public class User {
         }
     }
 
-    public static void write() {
-        StringSelection stringSelection = new StringSelection(TextFieldPanel.textField.getText());
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(stringSelection, null);
-    }
+    // TODO: 19.8.2023 г. Copy the result
+   // public static void write() {
+       // StringSelection stringSelection = new StringSelection(TextFieldPanel.textField.getText());
+     //   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+      //  clipboard.setContents(stringSelection, null);
+   // }
 
     /* public static String getOrderQuantity() throws IOException {
 
@@ -83,19 +97,28 @@ public class User {
          return null;
      }*/
     public static void printHtml() {
-        int a= 15;
-        int b = 25;
-        for (int i = 0; i <site.getDocument().getElementsByClass(
-                "mdc-layout-grid__cell mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop").text().length()-1 ; i++) {
-            System.out.println(site.getDocument().getElementsByClass(
-                    "mdc-layout-grid__cell mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop").text().substring(a,b));
-            a= a+ 11;
-            b= b+ 11;
+
+        int elementsQuantity = site.getDocument().getElementsByClass
+                ("mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop").size();
+
+        int elementsStart = 1;
+        int elementsStop = 6;
+        for (int i = 1; i < elementsQuantity; i++) {
+    if (i >= 10){
+        elementsStart = 2;
+        elementsStop = 7;
+    }
+            System.out.println(site.getDocument().getElementsByClass
+                    ("mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop").get(i).text().substring(elementsStart,elementsStop));
+        }
+
+
+
         }
 
 
 
     }
 
-}
+
 

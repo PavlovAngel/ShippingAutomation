@@ -1,12 +1,14 @@
 package Web;
 
+import Frame.TextField;
+import Frame.TextFieldPanel;
 import org.jsoup.nodes.Document;
 
 
 public class WebSite {
     private static boolean isRealUrl = true;
     private static String htmlElementOrderQuantity;
-    public static String deliveryNoteUrl = "http://192.168.0.57:3000/shipping/view/QLDbtJd1gM";
+    public static String deliveryNoteUrl = TextFieldPanel.getUrlFromTextField();
     private String detailInfoUrl;
     public String htmlElementLine;
     private Document document;
@@ -29,7 +31,7 @@ public class WebSite {
 
     public String getUrl(String url) {
 
-        return deliveryNoteUrl + url;
+        return url ;
     }
 
     public String getHtmlElementMaterialNumber() {
