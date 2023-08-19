@@ -2,7 +2,6 @@ package Frame;
 
 import javax.swing.*;
 
-
 public class BoxChoiceMenu extends JPanel {
     BoxChoiceMenu() {
         this.setBounds(0, 50, 160, 20);
