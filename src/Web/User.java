@@ -12,7 +12,7 @@ import java.io.IOException;
 
 
 public class User {
-    private static final String login = Account.getUserName() + ":" + Account.getPassword();
+    private static final String login = "shipping:shipping";
     private static final WebSite site = new WebSite();
 
 
@@ -83,7 +83,18 @@ public class User {
          return null;
      }*/
     public static void printHtml() {
-        System.out.println(site.getDocument());
+        int a= 15;
+        int b = 25;
+        for (int i = 0; i <site.getDocument().getElementsByClass(
+                "mdc-layout-grid__cell mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop").text().length()-1 ; i++) {
+            System.out.println(site.getDocument().getElementsByClass(
+                    "mdc-layout-grid__cell mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop").text().substring(a,b));
+            a= a+ 11;
+            b= b+ 11;
+        }
+
+
+
     }
 
 }

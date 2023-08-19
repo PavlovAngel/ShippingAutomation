@@ -6,7 +6,7 @@ import org.jsoup.nodes.Document;
 public class WebSite {
     private static boolean isRealUrl = true;
     private static String htmlElementOrderQuantity;
-    public static String deliveryNoteUrl = "https://www.abv.bg/";
+    public static String deliveryNoteUrl = "http://192.168.0.57:3000/shipping/view/QLDbtJd1gM";
     private String detailInfoUrl;
     public String htmlElementLine;
     private Document document;
