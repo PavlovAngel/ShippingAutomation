@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/angelpavlov/Downloads/apache-commons.jar",
+        "/Users/angelpavlov/Downloads/base64-2.3.7.jar",
+        "/Users/angelpavlov/Downloads/jsoup-1.16.1.jar",
+        "/Users/angelpavlov/Downloads/org-apache-commons-codec.jar"
+    ]
+}
