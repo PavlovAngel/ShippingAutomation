@@ -22,6 +22,7 @@ public class Window extends JFrame {
         //boxes.setBorder(BorderFactory.createLineBorder(Color.BLACK,1,true));
         //  weight.setBorder(BorderFactory.createLineBorder(Color.BLACK,1,true));
         weight.setBounds(130, 75, 50, 20);
+        this.setAlwaysOnTop(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();
         this.setLayout(null);

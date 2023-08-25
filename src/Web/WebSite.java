@@ -31,7 +31,7 @@ public class WebSite {
 
     public String getUrl(String url) {
 
-        return url ;
+        return url;
     }
 
     public String getHtmlElementMaterialNumber() {
@@ -50,11 +50,13 @@ public class WebSite {
     public void setDocument(Document document) {
         this.document = document;
     }
-    public static boolean getIsRealUrl(){
+
+    public static boolean getIsRealUrl() {
         return isRealUrl;
     }
-    public void setIsRealUrl(boolean isRealUrl){
-        this.isRealUrl=isRealUrl;
+
+    public void setIsRealUrl(boolean isRealUrl) {
+        this.isRealUrl = isRealUrl;
     }
 
 
